@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Dreams Bakery - Specials</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="delicute_sl logo" class="logo-img" style="height:50px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <nav class="nav me-auto mb-2 mb-lg-0">
+                        <a href="index.html" class="nav-link ">Home</a>
+                        <a href="products.html" class="nav-link ">Products</a>
+                        <a href="specials.html" class="nav-link active">Specials</a>
+                        <a href="order.html" class="nav-link ">Order</a>
+                    </nav>
+                </div>
+
+
+                <div class="header-icons">
+                    <button class="icon-btn cart-btn" onclick="window.location.href='cart.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <div class="user-menu">
+                        <button class="icon-btn user-btn" id="userBtn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <div class="user-dropdown" id="userDropdown">
+                            <a href="login.html">Login</a>
+                            <a href="signup.html">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Specials Banner -->
+    <section class="specials-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-content">
+                        <h1>Christmas Collection</h1>
+                        <p>Fresh seasonal flavors and limited-time treats to celebrate the season!</p>
+                        <div class="seasonal-badge">
+                            <i class="fas fa-leaf"></i>
+                            <span>Limited Time Only</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/christmas-special.jpg"
+                        alt="Christmas Specials" class="img-fluid banner-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Info Cards -->
+    <section class="special-info-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-clock"></i>
+                        <h3>Limited Time</h3>
+                        <p>These special offers are available for a limited time only. Don't miss out!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-truck"></i>
+                        <h3>Free Delivery</h3>
+                        <p>Free delivery on all special orders over $25. Same-day delivery available.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-gift"></i>
+                        <h3>Perfect Gifts</h3>
+                        <p>All specials come beautifully packaged, perfect for gifting to loved ones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials Content -->
+    <main class="specials-main">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Today's Special Offers</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="special-card featured">
+                        <div class="special-badge">Christmas special</div>
+                        <img src="images/christmas-toffee.webp"
+                            alt="Valentine's Special">
+                        <div class="special-content">
+                            <h2>Christmas Toffee</h2>
+                            <p>Indulge in our festive Christmas toffee, rich caramel blended with crunchy cookie pieces, all crowned with a drizzle of smooth chocolate. A perfect holiday treat!</p>
+                            <div class="price-section">
+                                <span class="special-price">LKR.350</span>
+                                <span class="unit">box of 6</span>
+                            </div>
+                            <button class="add-to-cart special-btn" data-product="Christmas-Toffee"
+                                data-price="200">
+                                <i class="fas fa-heart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="special-card">
+                        <div class="special-badge">Christmas special</div>
+                        <img src="images/Reindeer-Treats.jpg"
+                            alt="Reindeer Treats">
+                        <div class="special-content">
+                            <h2>Reindeer Treats</h2>
+                            <p>Enjoy our festive Reindeer Treat, crunchy biscuit pieces, colorful M&Ms, and a mix of sweet delights, sold by weight for the perfect holiday snack!</p>
+                            <div class="price-section">
+                                <span class="special-price">LKR.350</span>
+                                <span class="unit">100g</span>
+                            </div>
+                            <button class="add-to-cart special-btn" data-product="Reindeer Treats"
+                                data-price="350">
+                                <i class="fas fa-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="special-card">
+                        <div class="special-badge">Christmas special</div>
+                        <img src="images/christmas-sugar-cookie.jpg"
+                            alt="Christmas-sugar-cookie">
+                        <div class="special-content">
+                            <h2>Christmas-sugar-cookie</h2>
+                            <p>Delight in our Christmas Cookies, soft, buttery, and full of festive flavors, baked to perfection for a sweet holiday treat!</p>
+                            <div class="price-section">
+                                <span class="special-price">LKR.200</span>
+                                <span class="unit">box of 6</span>
+                            </div>
+                            <button class="add-to-cart special-btn" data-product="Christmas sugar cookie"
+                                data-price="200">
+                                <i class="fas fa-cookie-bite"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="special-card">
+                        <div class="special-badge">Weekend</div>
+                        <img src="images/christmas-cake.jpg"
+                            alt="Weekend Cake">
+                        <div class="special-content">
+                            <h2>Weekend Family Cake</h2>
+                            <p>Large 1kg chocolate cake perfect for family gatherings, serves 8-10 people</p>
+                            <div class="price-section">
+                                <span class="original-price">LKR.4,000</span>
+                                <span class="special-price">LKR.3,200</span>
+                                <span class="discount">20% OFF</span>
+                            </div>
+                            <button class="add-to-cart special-btn" data-product="Weekend Family Cake"
+                                data-price="3,200">
+                                <i class="fas fa-birthday-cake"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="special-card">
+                        <div class="special-badge">Daily</div>
+                        <img src="images/cookie-pizza.jpg"
+                            alt="Morning Pastries">
+                        <div class="special-content">
+                            <h2>Cookies Pizza</h2>
+                            <p>Try our Cookies Pizza, a fun, shareable twist on classic cookies, loaded with chocolate chips and toppings!</p>
+                            <div class="price-section">
+                                <span class="special-price">LKR.1,500</span>
+                                <span class="unit">each</span>
+                            </div>
+                            <button class="add-to-cart special-btn" data-product="Cookies Pizza"
+                                data-price="1,500">
+                                <i class="fas fa-sun"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="special-card">
+                        <div class="special-badge">Popular</div>
+                        <img src="images/peanut-cookie1.jpg"
+                            alt="peanut cookie">
+                        <div class="special-content">
+                            <h2>Peanut Cookie</h2>
+                            <p>Our popular Peanut Cookie combines the classic chocolate chip favorite with crunchy roasted peanuts, making it a best loved treat for sweet and nutty cravings!</p>
+                            <div class="price-section">
+                                <span class="original-price">LKR.130</span>
+                                <span class="special-price">LKR.110</span>
+                                <span class="discount">15% OFF</span>
+                            </div>
+                            <button class="add-to-cart special-btn" data-product="Peanut Cookie"
+                                data-price="110">
+                                <i class="fas fa-layer-group"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main-content">
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="delicute_sl@gmail.com" readonly>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <input type="text" placeholder="(94+) 121-23-4567" readonly>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fab fa-instagram"></i>
+                            <input type="text" placeholder="@delicute_sl" readonly>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Q & A</h3>
+                        <div class="qa-section">
+                            <textarea placeholder="Type here" rows="4"></textarea>
+                            <button type="submit" class="qa-submit-btn">submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links text-center mt-4">
+                    <a href="index.html" class="text-white me-3">Home</a>
+                    <a href="products.html" class="text-white me-3">Products</a>
+                    <a href="specials.html" class="text-white me-3">Specials</a>
+                    <a href="order.html" class="text-white">Order</a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="copyright text-center mt-4">© 2025 delicute_sl — Homemade with a teaspoon of love</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

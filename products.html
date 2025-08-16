@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Dreams Bakery - Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="delicute_sl logo" class="logo-img" style="height:50px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <nav class="nav me-auto mb-2 mb-lg-0">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="products.html" class="nav-link active">Products</a>
+                        <a href="specials.html" class="nav-link">Specials</a>
+                        <a href="order.html" class="nav-link ">Order</a>
+                    </nav>
+                </div>
+
+
+                <div class="header-icons">
+                    <button class="icon-btn cart-btn" onclick="window.location.href='cart.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <div class="user-menu">
+                        <button class="icon-btn user-btn" id="userBtn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <div class="user-dropdown" id="userDropdown">
+                            <a href="login.html">Login</a>
+                            <a href="signup.html">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for delicious treats..." class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="images/Red-Velvet-Brownie3.jpg" alt="Featured Brownies">
+                <div class="carousel-content">
+                    <h2>Decadent Brownies</h2>
+                    <p>Rich, fudgy brownies made with premium chocolate</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/smore-cookie1.webp" alt="gooey cookies">
+                <div class="carousel-content">
+                    <h2>Gooey Goodness</h2>
+                    <p>Crunch on the Outside, Gooey at Heart.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/raindow-cookies1.jpg" alt="Fresh Cookies">
+                <div class="carousel-content">
+                    <h2>Fresh Cookies</h2>
+                    <p>Neatly packed with love and care</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/bento-cake2.webp" alt="Custom Cakes">
+                <div class="carousel-content">
+                    <h2>Custom Cakes</h2>
+                    <p>Beautiful cakes for every special occasion</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/chocolate-mousse1.webp" alt="Creamy Mousse">
+                <div class="carousel-content">
+                    <h2>Creamy Mousse</h2>
+                    <p>Creamy goodness that melts in your mouth</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/eid-cookie.jpg" alt="Seasonal Treats">
+                <div class="carousel-content">
+                    <h2>Seasonal Treats</h2>
+                    <p>Limited edition flavors for every season</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <main class="main" id="products">
+        <!-- Brownies -->
+        <section class="product-category">
+            <h2 class="category-title">Brownies</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/classic-brownie1.jpg" alt="Classic Brownie">
+                    <div class="product-info">
+                        <h3>Classic Brownie</h3>
+                        <p class="price">LKR.200</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('classic-brownie')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/white-chocolate-brownie1.webp" alt="White chocolate brownie">
+                    <div class="product-info">
+                        <h3>White chocolate brownie</h3>
+                        <p class="price">LKR.200</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('white-chocolate-brownie')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Red-Velvet-Brownie1.jpg" alt="Red Velvet brownie">
+                    <div class="product-info">
+                        <h3>Red Velvet brownie</h3>
+                        <p class="price">LKR.230</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('red-velvet-brownie')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/brookie1.webp" alt="Brookie">
+                    <div class="product-info">
+                        <h3>Brookie</h3>
+                        <p class="price">LKR.180</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('brookie')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/snicker-brownie1.jpg" alt="Snicker brownie">
+                    <div class="product-info">
+                        <h3>Snicker brownie</h3>
+                        <p class="price">LKR.250</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('snicker-brownie')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cookies -->
+        <section class="product-category">
+            <h2 class="category-title">Cookies</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/chocolate-chip-cookie1.jpeg" alt="Classic Chocolate Chip Cookie">
+                    <div class="product-info">
+                        <h3>Classic Chocolate Chip Cookie</h3>
+                        <p class="price">LKR.100</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('chocolate-chip-cookie')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/raindow-cookies1.jpg" alt="Rainbow Cookie">
+                    <div class="product-info">
+                        <h3>Rainbow Cookie</h3>
+                        <p class="price">LKR.110</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('rainbow-cookies')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/smore-cookie1.webp" alt="S’more Cookie">
+                    <div class="product-info">
+                        <h3>S’more Cookie</h3>
+                        <p class="price">LKR.150</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('smore-cookie')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Cookie-Monster-Cookie1.webp" alt="Cookie Monster Cookie">
+                    <div class="product-info">
+                        <h3>Cookie Monster Cookie</h3>
+                        <p class="price">LKR.130</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('cookie-monster-cookie')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/peanut-cookie1.jpg" alt="Peanut Cookie">
+                    <div class="product-info">
+                        <h3>Peanut Cookie</h3>
+                        <p class="price">LKR.130</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('peanut-cookie')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cupcakes -->
+        <section class="product-category">
+            <h2 class="category-title">Mousse cups</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/chocolate-mousse1.webp" alt="Chocolate Mousse">
+                    <div class="product-info">
+                        <h3>Chocolate Mousse</h3>
+                        <p class="price">LKR.400</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('chocolate-mousse')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/jaggary-mousse1.webp" alt="Jaggery Mousse">
+                    <div class="product-info">
+                        <h3>Jaggery Mousse</h3>
+                        <p class="price">LKR.400</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('jaggery-mousse')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Mango-Mousse1.jpg" alt="Mango Mousse">
+                    <div class="product-info">
+                        <h3>Mango Mousse</h3>
+                        <p class="price">LKR.450</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('mango-mousse')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/blueberry-mousse1.webp" alt="Blueberry Mousse">
+                    <div class="product-info">
+                        <h3>Blueberry Mousse</h3>
+                        <p class="price">LKR.450</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('blueberry-mousse')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Oreo-mousse1.jpg" alt="Oreo Mousse">
+                    <div class="product-info">
+                        <h3>Oreo Mousse</h3>
+                        <p class="price">LKR.450</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('oreo-mousse')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cakes & Brownie Slabs -->
+        <section class="product-category">
+            <h2 class="category-title">Cakes & Brownie Slabs</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/bento-cake1.png" alt="Bento Cake">
+                    <div class="product-info">
+                        <h3>Bento Cake</h3>
+                        <p class="price">LKR.1000</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('bento-cake')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/fondent-cake1.jpg" alt="Fondant Cake">
+                    <div class="product-info">
+                        <h3>Fondant Cake</h3>
+                        <p class="price">LKR.6000</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('fondant-cake')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/decorated-cake1.jpeg" alt="Decorated Icing Cake">
+                    <div class="product-info">
+                        <h3>Decorated Icing Cake</h3>
+                        <p class="price">LKR.4000</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('decorated-cake')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/8x8-brownie-slab1.jpg" alt="8x8 Brownie Slab">
+                    <div class="product-info">
+                        <h3>8x8 Brownie Slab</h3>
+                        <p class="price">LKR.2500</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('8x8-brownie-slab')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/8x6-brownie-slab1.jpg" alt="8x6 Brownie Slab">
+                    <div class="product-info">
+                        <h3>8x6 Brownie Slab</h3>
+                        <p class="price">LKR.1700</p>
+                        <button class="view-details-btn" onclick="viewProductDetail('8x6-brownie-slab')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main-content">
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="delicute_sl@gmail.com" readonly>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <input type="text" placeholder="(94+) 121-23-4567" readonly>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fab fa-instagram"></i>
+                            <input type="text" placeholder="@delicute_sl" readonly>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Q & A</h3>
+                        <div class="qa-section">
+                            <textarea placeholder="Type here" rows="4"></textarea>
+                            <button type="submit" class="qa-submit-btn">submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links text-center mt-4">
+                    <a href="index.html" class="text-white me-3">Home</a>
+                    <a href="products.html" class="text-white me-3">Products</a>
+                    <a href="specials.html" class="text-white me-3">Specials</a>
+                    <a href="order.html" class="text-white">Order</a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="copyright text-center mt-4">© 2025 delicute_sl — Homemade with a teaspoon of love</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>
